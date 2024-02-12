@@ -4,6 +4,14 @@ function esVocal(letra) {
   // Si no es vocal, tambien debe retornar "Dato incorrecto".
   // Tu código:
 
+  if( letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u' ) {
+    return "Es vocal"
+  }else {
+    return "Dato incorrecto"
+  }
+  if ( letra.length  > 3){
+    return "Dato incorrecto"
+  }
 }
 
 module.exports = esVocal;
