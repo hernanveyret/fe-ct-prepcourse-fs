@@ -3,7 +3,11 @@ function productoEntreNúmeros(a, b) {
   // los números entre a y b (inclusive).
   // Tu código:
 
-  
+  let producto = 1
+  for ( let i = a; i <= b; i++){
+   producto = producto * i
+  }
+  return producto
 }
 
 module.exports = productoEntreNúmeros;

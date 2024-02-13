@@ -3,7 +3,7 @@ function esVerdadero(valor) {
   // Caso contrario, retorna "Soy falso".
   // Tu código:
 
-  if( valor === true ){
+  if( valor ){
     return "Soy verdadero"
   }else {
     return "Soy falso"
