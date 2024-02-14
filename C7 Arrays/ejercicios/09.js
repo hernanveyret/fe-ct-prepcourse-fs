@@ -4,8 +4,8 @@ function obtenerElementoAleatorio(array) {
    // Tu código:
 
    let indice = Math.random();
-   let i = Math.ceil(indice)
+   let i = Math.round(indice)
    return array[i]
 }
-// volver a hacer
+
 module.exports = obtenerElementoAleatorio;

@@ -3,7 +3,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // Retorna el arreglo.
   // Tu código:
   array.unshift(elemento);
-  return array
+  return array;
 }
-// el test da mal
+// el test da mal pero esta bien hecho
 module.exports = agregarItemAlComienzoDelArray;

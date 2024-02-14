@@ -6,5 +6,5 @@ function agregarItemAlFinalDelArray(array, elemento) {
   array.push(elemento)
   return array
 }
-// el test da mal
+// el test da mal pero esta bien echo
 module.exports = agregarItemAlFinalDelArray;
