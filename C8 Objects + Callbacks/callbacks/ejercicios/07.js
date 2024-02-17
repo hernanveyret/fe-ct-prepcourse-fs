@@ -3,7 +3,8 @@ function filter(arrayOfStrings) {
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
 
-   
+   let tienenA = arrayOfStrings.filter(e => e[0] === 'a');
+   return tienenA
 }
 
 module.exports = filter;

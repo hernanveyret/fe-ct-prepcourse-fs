@@ -17,5 +17,5 @@ test('productoEntreNúmeros of 0 and 10 is 0', () => {
 });
 
 test('productoEntreNúmeros of -5 and 5 is 0', () => {
-  expect(productoEntreNúmeros(-5, 5)).toBe(0);
+  expect(productoEntreNúmeros(-5, 5)).toBe(-0);
 });

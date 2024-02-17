@@ -4,6 +4,7 @@ function cambiarCadena(string, callback) {
    // Si no se recibe una función callback entonces se debe retornar el string original.
    // Tu código:
    
+   return callback ? callback(string) :  string
 }
 
 module.exports = cambiarCadena;

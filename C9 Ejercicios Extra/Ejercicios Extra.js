@@ -6,6 +6,11 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  let arr = []
+  for (const key in objeto) {
+  arr.push([key + ":" , objeto[key]]);
+}
+console.log(arr)
 }
 
 function numberOfCharacters(string) {
@@ -22,6 +27,11 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
+  let str = string.split('')
+  let up = str.filter(e => e === e.toUpperCase())
+  let down = str.filter(e => e != e.toUpperCase())
+  let arr = up.concat(down).join('')
+  console.log(arr)
 }
 
 function asAmirror(frase) {
@@ -29,18 +39,31 @@ function asAmirror(frase) {
   // La diferencia es que cada palabra estará escrita al inverso.
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
+  let arr = frase.split(' ')
+  let arr3=arr.map(e => e.split('').reverse().join(''))
+  return arr3.join(' ')
 }
 
 function capicua(numero) {
   // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
   // Caso contrario: "No es capicua".
   // Tu código:
+  let str = numero.toString().split('').reverse().join('')
+  num = parseFloat(str)
+  if(num === numero){
+    return true
+  }else{
+    return false
+  }
 }
 
 function deleteAbc(string) {
   // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
   // Retorna el string sin estas letras.
   // Tu código:
+  let strArr = string.split('');
+  string = strArr.filter(e => e != 'a' && e != 'b')
+  return string
   
 }
 
@@ -50,6 +73,18 @@ function sortArray(arrayOfStrings) {
   // de la longitud de cada string.
   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
+
+  let subIndice;
+   for ( let i=0; i < arrayOfStrings.length-1; i++) {
+       for (let b = i+1; b < arrayOfStrings.length; b++){
+           if (arrayOfStrings[i].length > arrayOfStrings[b].length){
+                   subIndice = arrayOfStrings[i];
+                   arrayOfStrings[i] = arrayOfStrings[b];
+                   arrayOfStrings[b] = subIndice; 
+           }
+       }
+  }            
+       return arrayOfStrings
 }
 
 function buscoInterseccion(array1, array2) {
