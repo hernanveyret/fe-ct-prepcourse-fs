@@ -44,7 +44,7 @@ function capToFront(string) {
   let up = str.filter(e => e === e.toUpperCase())
   let down = str.filter(e => e != e.toUpperCase())
   let arr = up.concat(down).join('')
-  console.log(arr)
+  return arr
 }
 
 function asAmirror(frase) {
@@ -63,10 +63,10 @@ function capicua(numero) {
   // Tu código:
   let str = numero.toString().split('').reverse().join('')
   num = parseFloat(str)
-  if(num === numero){
-    return true
+  if(num == numero){
+    return "Es capicua"
   }else{
-    return false
+    return "No es capicua"
   }
 }
 
@@ -75,8 +75,8 @@ function deleteAbc(string) {
   // Retorna el string sin estas letras.
   // Tu código:
   let strArr = string.split('');
-  string = strArr.filter(e => e != 'a' && e != 'b')
-  return string
+  string = strArr.filter(e => e != 'a' && e != 'b' && e != 'c')
+  return string.join('')
   
 }
 
