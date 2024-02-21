@@ -5,6 +5,7 @@ function cambiarCadena(string, callback) {
    // Tu código:
    
    return callback ? callback(string) :  string
+
 }
 
 module.exports = cambiarCadena;

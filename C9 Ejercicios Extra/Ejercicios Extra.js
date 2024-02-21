@@ -6,11 +6,13 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
-  let arr = []
-  for (const key in objeto) {
-  arr.push([key + ":" , objeto[key]]);
-}
-console.log(arr)
+  const arr = [];
+  let prop = Object.keys(objeto);
+  let valor = Object.values(objeto);
+  for ( let i = 0; i < prop.length; i++){
+   arr.push([prop[i],valor[i]])
+  }
+    return arr
 }
 
 function numberOfCharacters(string) {
@@ -19,6 +21,16 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+
+  let obj = {}
+  for ( let i = 0; i < string.length; i++ ){      
+      if(obj[string[i]]){
+        obj[string[i]]++
+      }else{
+        obj[string[i]] = 1
+      }
+  }
+  return obj
 }
 
 function capToFront(string) {
@@ -94,6 +106,14 @@ function buscoInterseccion(array1, array2) {
   // Si no tienen elementos en común, retornar un arreglo vacío.
   // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
   // Tu código:
+
+  if ( array1 > array2 ){
+    let iguales = array1.filter(e => array2.includes(e))
+    return iguales    
+      }else {
+        let iguales = array2.filter(e => array1.includes(e))
+    return iguales
+      }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
